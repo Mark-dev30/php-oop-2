@@ -15,7 +15,8 @@ include __DIR__ . '/database.php';
 </head>
 
 <body>
-
+    <?php echo '<pre>';
+    var_dump($product_1)  ?>
 </body>
 
 </html>

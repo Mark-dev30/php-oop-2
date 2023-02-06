@@ -1,4 +1,10 @@
 <?php
-class Category extends Products
+class Category
 {
+    public $typology;
+
+    public function __construct($_typology)
+    {
+        $this->typology = $_typology;
+    }
 }

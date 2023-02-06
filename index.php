@@ -1,7 +1,6 @@
 <?php
 include __DIR__ . '/database.php';
 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,8 +14,36 @@ include __DIR__ . '/database.php';
 </head>
 
 <body>
-    <?php echo '<pre>';
-    var_dump($product_1)  ?>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <h2>Boolshop</h2>
+            </a>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h4>I nostri prodotti</h4>
+            </div>
+        </div>
+        <div class="row">
+            <?php foreach ($arrayproducts as $product) { ?>
+                <div class="col-4">
+                    <div class="card m-2" style="width: 20rem;">
+                        <div class="card-body">
+                            <?php echo '<img src="' . $product->image . '" class="img-fluid"' ?>
+                            <h5 class="card-title"><?php echo $product->title ?></h5>
+                            <h6 class="card-subtitle mb-2 text-muted"><?php echo $product->category->typology ?></h6>
+                            <h6 class="card-subtitle mb-2 text-muted"><?php echo $product->price ?></h6>
+                            <h6 class="card-subtitle mb-2 text-muted"><?php echo $product->title_1  ?></h6>
+                            <h6 class="card-subtitle mb-2 text-muted"><?php echo $product->title_2  ?></h6>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
 </body>
 
 </html>

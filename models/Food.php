@@ -1,12 +1,13 @@
 <?php
-class Food extends Type
+class Food extends Product
 {
-    public $weight;
-    public $ingredients;
+    public $title_1;
+    public $title_2;
 
-    public function __construct($_weight, $_ingredients)
+    public function __construct($image, $title, $price, $category, $_title_1, $_title_2)
     {
-        $this->weight = $_weight;
-        $this->ingredients = $_ingredients;
+        parent::__construct($image, $title, $price, $category);
+        $this->title_1 = $_title_1;
+        $this->title_2 = $_title_2;
     }
 }

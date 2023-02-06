@@ -30,3 +30,16 @@ $arrayproducts = [
     $product_9,
     $product_10,
 ];
+
+function setTypology($typology)
+{
+    if ($typology == 'Dog') {
+        return '<i class="fa-solid fa-dog"></i>';
+    } elseif ($typology == 'Cat') {
+        return '<i class="fa-solid fa-cat"></i>';
+    } elseif ($typology == 'Bird') {
+        return '<i class="fa-solid fa-dove"></i>';
+    } else {
+        return '<i class="fa-solid fa-fish-fins"></i>';
+    }
+};

@@ -1,13 +1,13 @@
 <?php
 class Accessory extends Product
 {
-    public $title_1;
-    public $title_2;
+    public $material;
+    public $size;
 
-    public function __construct($image, $title, $price, $category, $_title_1, $_title_2)
+    public function __construct($image, $title, $price, $category, $_material, $_size)
     {
         parent::__construct($image, $title, $price, $category);
-        $this->title_1 = $_title_1;
-        $this->title_2 = $_title_2;
+        $this->material = $_material;
+        $this->size = $_size;
     }
 }

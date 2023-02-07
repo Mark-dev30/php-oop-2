@@ -38,8 +38,18 @@ include __DIR__ . '/database.php';
                             <h6 class="card-subtitle mb-2 text-muted"><?php echo setTypology($product->category->typology);
                                                                         echo $product->category->typology ?></h6>
                             <h6 class="card-subtitle mb-2 text-muted"><?php echo $product->price ?></h6>
-                            <h6 class="card-subtitle mb-2 text-muted"><?php echo $product->title_1  ?></h6>
-                            <h6 class="card-subtitle mb-2 text-muted"><?php echo $product->title_2  ?></h6>
+                            <?php if (get_class($product) == 'Food') { ?>
+                                <h6 class="card-subtitle mb-2 text-muted"><?php echo $product->weight  ?></h6>
+                                <h6 class="card-subtitle mb-2 text-muted"><?php echo $product->ingredient  ?></h6>
+                            <?php } ?>
+                            <?php if (get_class($product) == 'Accessory') { ?>
+                                <h6 class="card-subtitle mb-2 text-muted"><?php echo $product->material  ?></h6>
+                                <h6 class="card-subtitle mb-2 text-muted"><?php echo $product->size  ?></h6>
+                            <?php } ?>
+                            <?php if (get_class($product) == 'Game') { ?>
+                                <h6 class="card-subtitle mb-2 text-muted"><?php echo $product->characteristics  ?></h6>
+                                <h6 class="card-subtitle mb-2 text-muted"><?php echo $product->size  ?></h6>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>

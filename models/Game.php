@@ -1,13 +1,13 @@
 <?php
 class Game extends Product
 {
-    public $title_1;
-    public $title_2;
+    public $characteristics;
+    public $size;
 
-    public function __construct($image, $title, $price, $category, $_title_1, $_title_2)
+    public function __construct($image, $title, $price, $category, $_characteristics, $_size)
     {
         parent::__construct($image, $title, $price, $category);
-        $this->title_1 = $_title_1;
-        $this->title_2 = $_title_2;
+        $this->characteristics = $_characteristics;
+        $this->size = $_size;
     }
 }
